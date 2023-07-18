@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background: url("bg.png");
+    background-size: cover;
+    text-align: center;
+    transition: filter 0.7s;
+}
+
+h1 {
+    font-size: 60px;
+    color: white;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container p {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    color: white;
+    font-weight: 400;
+}
+
+.btn {
+    padding: 10px 20px;
+    width: 200px;
+    cursor: pointer;
+    border: 2px solid #006bb3;
+    background: none;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #006bb3;
+    color: white;
+}
+
+.active.container {
+    filter: blur(5px) brightness(0.7);
+}
+
+.popup-container {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    width: 400px;
+    height: 450px;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: url("https://unsplash.com/photos/0VGG7cqTwCo");
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    transition: all 0.7s;
+}
+
+h4 {
+    font-size: 30px;
+    margin: 10px 0;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+}
+
+label {
+    color: white;
+    font-family: sans-serif;
+}
+
+.popup-btn {
+    background: none;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid;
+    transition: 0.4s ease-in-out;
+}
+
+.popup-btn:hover {
+    background-color: #006bb3;
+    color: black;
+}
+
+.input {
+    border: 2px solid;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.input .select-city {
+    color: #bfbfbf;
+}
+
+.input::placeholder {
+    color: #bfbfbf;
+}
+
+.close-icon {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.close-icon:hover {
+    color: #006bb3;
+}
+
+.active.popup-container {
+    visibility: hidden;
+    opacity: 0;
+    top: 10%;
+}
